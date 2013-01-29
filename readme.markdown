@@ -30,7 +30,6 @@ Grunt Tasks
 Following grunt tasks are defined:
 
 * **lint** - will run *JSHint* on all scripts in `lib` and `test` directories
-* **qunit** - will attempt to run Qunit unit tests from `test` directory
 * **watch** - continuously lint files as you edit
 * **server watch** - start a web server on port 3000
 
