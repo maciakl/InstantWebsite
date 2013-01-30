@@ -24,6 +24,11 @@ This will download all the required files (Twitter Bootrstrap assets and jQuery 
 
 You can add custom styles in `lib/custom.css` and custom scripts in `lib/custom.js`.
 
+Deploying the Website
+---
+
+Upload `components`, `lib` and `index.html` to your server. You probably may want to edit `index.html` a little bit so that it doesn't look exactly like the example.
+
 Grunt Tasks
 ---
 
