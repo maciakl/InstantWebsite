@@ -67,13 +67,7 @@ You may want to install grunt 0.3x - I took the liberty of setting up a tiny gru
 
 Now you can run `grunt` to start a local web server and see how your page looks. It runs on port 3000 so just point your browser at `http://localhost:3000`. The process will also continuously validate your HTML against the standard as you work.
 
-Deploying the Website
----
-
-Upload `components/`, and `index.html` to your server. You probably may want to edit `index.html` a little bit so that it doesn't look exactly like the example.
-
-Grunt Tasks
----
+### Grunt Tasks
 
 Following grunt tasks are defined:
 
@@ -82,6 +76,11 @@ Following grunt tasks are defined:
 * **server watch** - start a web server on port 3000
 
 The default task is `server watch` which starts a server then watches for changes and validates HTML as you edit.
+
+Deploying the Website
+---
+
+Upload `components/`, and `index.html` to your server. You probably may want to edit `index.html` a little bit so that it doesn't look exactly like the example.
 
 [n]: http://nodejs.org/
 [b]: http://twitter.github.com/bower/
