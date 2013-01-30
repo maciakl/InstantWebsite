@@ -8,7 +8,7 @@ module.exports = function(grunt) {
     },
     watch: {
       files: ['index.html'],
-      tasks: 'lint qunit'
+      tasks: 'lint'
     },
     jshint: {
       options: {
