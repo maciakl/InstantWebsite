@@ -78,10 +78,10 @@ Now you can run `grunt` to start a local web server and see how your page looks.
 
 Following grunt tasks are defined:
 
-* **grunt htmllint** - validate your html (validates, then quits)
-* **grunt watch** - continuously validate html as you edit (re-validates each time you save)
-* **grunt server watch** - start a web server on port 3000
-* **grunt**  - default task is set to `server watch` which saves you typing.
+* `grunt htmllint` - validate your html (validates, then quits)
+* `grunt watch` - continuously validate html as you edit (re-validates each time you save)
+* `grunt server watch` - start a web server on port 3000
+* `grunt`  - default task is set to `server watch` which saves you typing.
 
 Deploying the Website
 ---
