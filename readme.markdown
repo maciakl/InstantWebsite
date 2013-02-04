@@ -63,7 +63,11 @@ You can treat the `components` directory as static assets and just deploy it wit
 Development Aids
 ---
 
-You may want to install grunt 0.3x - I took the liberty of setting up a tiny grunt file to help with the development. To set up your environment please run `npm install` in your project directory. This will fetch `grunt-html` plugin and install it locally into `node_modules`. Do not upload this directory to the server - this just helps grunt to validate html. 
+You may want to install grunt 0.3x - I took the liberty of setting up a tiny grunt file to help with the development. To set up your environment please run the following command in your project directory: 
+
+    npm install 
+    
+This will fetch `grunt-html` plugin and install it locally into `node_modules`. Do not upload this directory to the server - this just helps grunt to validate html. 
 
 Now you can run `grunt` to start a local web server and see how your page looks. It runs on port 3000 so just point your browser at `http://localhost:3000`. The process will also continuously validate your HTML against the standard as you work.
 

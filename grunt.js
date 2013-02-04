@@ -4,15 +4,15 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     watch: {
-      files: ['index.html'],
+      files: ['web/*.html'],
       tasks: 'htmllint'
     },
     htmllint: {
-        files: 'index.html'
+        files: 'web/*.html'
     },
     server: {
         port: 3000,
-        base: '.'
+        base: 'web'
     }
   });
 
