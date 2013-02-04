@@ -12,7 +12,7 @@ This is how you bootstrap a website in 5 seconds:
     cd InstantWebsite
     bower install
 
-Boom, done. Now you have a Bootstrap driven website ready to go.
+Boom, done. Now you have a Bootstrap driven website ready to go in the `web/` directory.
 
 Prerequisites
 ---
@@ -30,35 +30,38 @@ To start a new website, clone this repository, then do:
 
     bower install
 
-This will download all the static assets (Twitter Bootrstrap and jQuery scripts) into a `components` directory. When done you should see a file structure like this: 
+This will download all the static assets (Twitter Bootrstrap and jQuery scripts) into a `web/components/` directory. When done you should see a file structure like this: 
 
     .
+    ├── .bowerrc
     ├── component.json
-    ├── components
-    │   ├── bootstrap
-    │   │   ├── component.json
-    │   │   ├── css
-    │   │   │   ├── bootstrap.css
-    │   │   │   ├── bootstrap.min.css
-    │   │   │   ├── bootstrap-responsive.css
-    │   │   │   └── bootstrap-responsive.min.css
-    │   │   ├── img
-    │   │   │   ├── glyphicons-halflings.png
-    │   │   │   └── glyphicons-halflings-white.png
-    │   │   └── js
-    │   │       ├── bootstrap.js
-    │   │       └── bootstrap.min.js
-    │   └── jquery
-    │       ├── component.json
-    │       ├── composer.json
-    │       ├── jquery.js
-    │       └── jquery.min.js
+    ├── .gitignore
     ├── grunt.js
-    ├── index.html
     ├── package.json
-    └── readme.markdown
+    ├── readme.markdown
+    └── web
+        ├── components
+        │   ├── bootstrap
+        │   │   ├── component.json
+        │   │   ├── css
+        │   │   │   ├── bootstrap.css
+        │   │   │   ├── bootstrap.min.css
+        │   │   │   ├── bootstrap-responsive.css
+        │   │   │   └── bootstrap-responsive.min.css
+        │   │   ├── img
+        │   │   │   ├── glyphicons-halflings.png
+        │   │   │   └── glyphicons-halflings-white.png
+        │   │   └── js
+        │   │       ├── bootstrap.js
+        │   │       └── bootstrap.min.js
+        │   └── jquery
+        │       ├── component.json
+        │       ├── composer.json
+        │       ├── jquery.js
+        │       └── jquery.min.js
+        └── index.html
 
-You can treat the `components` directory as static assets and just deploy it with your site.
+You can treat the `web/components/` directory as static assets and just deploy it with your site.
 
 Development Aids
 ---
@@ -67,7 +70,7 @@ You may want to install grunt 0.3x - I took the liberty of setting up a tiny gru
 
     npm install 
     
-This will fetch `grunt-html` plugin and install it locally into `node_modules`. Do not upload this directory to the server - this just helps grunt to validate html. 
+This will fetch `grunt-html` plugin and install it locally into `node_modules`. Do not upload this directory to the server - this just a development time dependency that helps grunt to validate html. 
 
 Now you can run `grunt` to start a local web server and see how your page looks. It runs on port 3000 so just point your browser at `http://localhost:3000`. The process will also continuously validate your HTML against the standard as you work.
 
@@ -75,16 +78,15 @@ Now you can run `grunt` to start a local web server and see how your page looks.
 
 Following grunt tasks are defined:
 
-* **htmllint** - validate your html (validates, then quits)
-* **watch** - continuously validate html as you edit (re-validates each time you save)
-* **server watch** - start a web server on port 3000
-
-The default task is `server watch` which starts a server then watches for changes and validates HTML as you edit.
+* **grunt htmllint** - validate your html (validates, then quits)
+* **grunt watch** - continuously validate html as you edit (re-validates each time you save)
+* **grunt server watch** - start a web server on port 3000
+* **grunt**  - default task is set to `server watch` which saves you typing.
 
 Deploying the Website
 ---
 
-Upload `components/`, and `index.html` to your server. You probably may want to edit `index.html` a little bit so that it doesn't look exactly like the example.
+Upload the contents of the `web/` directory to your server. 
 
 [n]: http://nodejs.org/
 [b]: http://twitter.github.com/bower/
