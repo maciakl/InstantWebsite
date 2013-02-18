@@ -66,11 +66,15 @@ You can treat the `web/components/` directory as static assets and just deploy i
 Development Aids
 ---
 
-You may want to install grunt 0.3x - I took the liberty of setting up a tiny grunt file to help with the development. To set up your environment please run the following command in your project directory: 
+You may want to install `grunt-cli` package globally via npm:
+
+    npm install -g grunt-cli
+
+I took the liberty of setting up a tiny grunt file to help with the development. To set up your environment please run the following command in your project directory: 
 
     npm install 
     
-This will fetch `grunt-html` plugin and install it locally into `node_modules`. Do not upload this directory to the server - this just a development time dependency that helps grunt to validate html. 
+This will fetch `grunt`,  `grunt-html` and appropriate `grunt-contrib` plugins and install it locally into `node_modules`. Do not upload this directory to the server - these just a development time dependencies that let you run a local server and validate html.
 
 Now you can run `grunt` to start a local web server and see how your page looks. It runs on port 3000 so just point your browser at `http://localhost:3000`. The process will also continuously validate your HTML against the standard as you work.
 
@@ -80,8 +84,8 @@ Following grunt tasks are defined:
 
 * `grunt htmllint` - validate your html (validates, then quits)
 * `grunt watch` - continuously validate html as you edit (re-validates each time you save)
-* `grunt server watch` - start a web server on port 3000
-* `grunt`  - default task is set to `server watch` which saves you typing.
+* `grunt connect` - start a web server on port 3000 (if called on its own it just quits immediately)
+* `grunt`  - default task is set to `connect` followed by `watch` which will start the server, then watch for file changed files and validate them.
 
 Deploying the Website
 ---
