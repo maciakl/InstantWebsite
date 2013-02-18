@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "dependencies": {},
   "devDependencies": {
+    "grunt": "0.3.x",
     "grunt-html": "~0.2.x"
   }
 }
